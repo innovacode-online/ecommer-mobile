@@ -1,13 +1,18 @@
-
-import { StatusBar } from 'expo-status-bar'
 import { Text, View } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
 import { SafeAreaView } from 'react-native-safe-area-context'
+
 import { TYPOGRAPHY, GLOBALS } from '../shared/globals';
-import { SearchInput } from '../components/products/SearchInput';
+import { CategoryList, SearchInput } from '../components';
+
+import { useContext } from 'react';
+import { EcommerceContext } from '../context/ecommerce/EcommerceContext';
 
 export const HomeScreen = () => {
 
     // const { top } = useSafeAreaInsets();
+
+    const { producto } = useContext( EcommerceContext );
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -20,7 +25,7 @@ export const HomeScreen = () => {
             </View>
 
             <SearchInput />
-
+            <CategoryList/>
         </SafeAreaView>
     )
 }
