@@ -9,7 +9,7 @@ interface Props {
 export const CategoryButton = ({ category }: Props) => {
 
     const baseURL = 'https://store.innovacode.online'
-console.log(category.image)
+
     return (
         <View style={{ ...GLOBALS.category_button }}>
             <Image
