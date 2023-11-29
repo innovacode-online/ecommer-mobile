@@ -1,10 +1,10 @@
 import { createContext } from "react";
+import { ICategory, IProduct } from "../../interfaces";
 
 
 interface ContextProps {
-    producto: {
-        name: string;
-    }
+    products: IProduct[];
+    categories: ICategory[];
 }
 
 export const EcommerceContext = createContext({} as ContextProps );
