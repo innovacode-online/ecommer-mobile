@@ -3,6 +3,7 @@ import { IProduct } from '../../interfaces'
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { GLOBALS } from '../../shared/globals';
 import { COLORS } from '../../shared/theme';
+import { useNavigation } from '@react-navigation/native';
 
 interface Props {
     product: IProduct;
@@ -10,10 +11,18 @@ interface Props {
 
 export const ProductCard = ({ product }: Props) => {
 
-    const baseURL = 'https://store.innovacode.online'
+    const baseURL = 'https://store.innovacode.online';
+
+
+    const navigation = useNavigation<any>();
+
+    const handleNavigate = () => {
+        navigation.navigate('ProductScreen', { slug: product.slug });
+    }
+
 
     return (
-        <TouchableOpacity activeOpacity={ 0.9 } style={ GLOBALS.product_card }>
+        <TouchableOpacity onPress={handleNavigate} activeOpacity={ 0.9 } style={ GLOBALS.product_card }>
             <View style={{ alignItems: 'center', marginBottom: 20 }}>
                 <Image
                     style={{ width: 100, height: 100 }}

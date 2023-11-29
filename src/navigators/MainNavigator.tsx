@@ -1,7 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import React from 'react'
-import { HomeScreen } from '../screens/HomeScreen';
+
 import { COLORS } from '../shared/theme';
+import { HomeScreen } from '../screens/HomeScreen';
+import { ProductScreen } from '../screens/ProductScreen';
 
 
 const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ export const MainNavigator = () => {
         
         >
             <Stack.Screen name='HomeScreen' component={ HomeScreen } />
+            <Stack.Screen name='ProductScreen' component={ ProductScreen } />
         </Stack.Navigator>
     )
 }
