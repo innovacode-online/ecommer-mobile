@@ -9,7 +9,7 @@ export const HomeScreen = () => {
 
 
     return (
-        <ScrollView style={{ flex: 1 }}>
+        <ScrollView  showsVerticalScrollIndicator={ false }  style={{ flex: 1 }}>
             <StatusBar style='dark' />
             <SafeAreaView>
                 <View style={{ ...GLOBALS.container, marginBottom: 20 }}>

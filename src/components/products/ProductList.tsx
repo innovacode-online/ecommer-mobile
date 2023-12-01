@@ -12,7 +12,6 @@ export const ProductList = () => {
         <View style={ GLOBALS.container }>
             <Text style={ TYPOGRAPHY.title }>Todos los productos</Text>
             <View style={ GLOBALS.products_list }>
-                {/* LISTADO DE PRODUCTOS */}
                 {
                     products.map(product => (
                         <ProductCard key={ product.id } product={ product }/>
